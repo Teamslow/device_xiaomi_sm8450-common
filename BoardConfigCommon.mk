@@ -5,7 +5,7 @@
 #
 
 # Inherit from the proprietary version
-include vendor/xiaomi/sm8450-common/BoardConfigVendor.mk
+#include vendor/xiaomi/sm8450-common/BoardConfigVendor.mk
 
 COMMON_PATH := device/xiaomi/sm8450-common
 
@@ -195,6 +195,9 @@ include device/qcom/sepolicy_vndr/SEPolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+
+# Vendor
+BUILD_WITHOUT_VENDOR := true
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
